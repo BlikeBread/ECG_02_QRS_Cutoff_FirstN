@@ -1,9 +1,10 @@
-# ECG_QRS_Cutoff_FirstN
+# ECG QRS-Based Beat Selection Pipeline (Script 02/03)
 
-QRS-Based Beat Selection and Averaging Pipeline (Script 02/03)
-This repository contains an R script for QRS-driven ECG preprocessing based on objective cutoff detection and standardized First-N beat averaging.
-This script represents the second step (02/03) of a modular ECG analysis pipeline.
-It operates on already time-aligned ECG recordings (e.g. post-injection windows) and produces clean, per-recording summary tables ready for statistical analysis.
+This repository contains an R script for QRS-based preprocessing of ECG feature data following time alignment to experimental events (e.g. drug injection).
+
+This script represents the **second step (02/03)** of a modular ECG analysis pipeline.
+
+It takes time-windowed ECG recordings as input and performs objective QRS cutoff detection followed by standardized First-N beat averaging, producing cleaned summary tables ready for statistical analysis.
 
 ---
 
@@ -60,7 +61,7 @@ This script is Script 02 of a 3-step ECG analysis workflow:
 2. Script 02 (this repository) – QRS-based beat selection and First-N averaging
 3. Script 03 – Metadata integration, statistics, and visualization
 
-Metadata integration and group-level analysis are intentionally performed outside this script.
+**Metadata integration (grouping, treatment, genotype, etc.) is intentionally performed outside this script and used in downstream analysis (Script 03).**
 
 ---
 
