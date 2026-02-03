@@ -21,6 +21,7 @@ It takes time-windowed ECG recordings as input and performs objective QRS cutoff
 ---
 
 ## What the pipeline does
+
 1. Starting from per-recording ECG CSV files (e.g. post-injection 2-minute windows), the script:
 2. Loads multiple ECG CSV files (one file per mouse / subject)
 3. Pools QRS interval values across all recordings
@@ -65,7 +66,8 @@ This script is Script 02 of a 3-step ECG analysis workflow:
 
 ---
 
-## Methods description
+## Methods Description
+
 ECG recordings were processed using a custom R pipeline in which QRS interval distributions were pooled across recordings and modeled using a two-component Gaussian mixture. An objective QRS cutoff was selected interactively, and for each recording the first beat exceeding this threshold was identified. The subsequent N beats were extracted and averaged to generate per-recording ECG feature summaries for downstream statistical analysis.
 
 ---
